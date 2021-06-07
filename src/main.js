@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueQrcodeReader from "vue-qrcode-reader";
 
-Vue.use(VueQrcodeReader);
 
 Vue.config.productionTip = false
 

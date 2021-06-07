@@ -2,10 +2,6 @@
   <div>
     <p class="error">{{ error }}</p>
 
-    <p class="decode-result">
-      Last result: <b>{{ result }}</b>
-    </p>
-
     <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
   </div>
 </template>
@@ -18,14 +14,13 @@ export default {
 
   data() {
     return {
-      result: "",
       error: "",
     };
   },
 
   methods: {
-    onDecode(result) {
-      this.result = result;
+    onDecode(url) {
+      window.location.href = url;
     },
 
     async onInit(promise) {
